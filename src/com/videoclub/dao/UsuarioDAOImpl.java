@@ -17,7 +17,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		Date fechaBaja = new Date();
 		
 		Usuario admin = new Usuario(00, "00000000A", 0000, "Admin", "admin", "admin", 654321987,
-				true, 100, 0, fechaIni, fechaBaja, "abc123");
+				true, 100, 0, fechaIni, fechaBaja, "abc");
 		
 		listUsuarios.add(admin);
 		
