@@ -9,7 +9,7 @@ public class Usuario {
 	private int id;
 	private String dni;
 	private int codUsuario;
-	private String Nombre;
+	private String nombre;
 	private String apellido1;
 	private String apellido2;
 	private int telefono;
@@ -32,7 +32,7 @@ public class Usuario {
 		this.id = id;
 		this.dni = dni;
 		this.codUsuario = codUsuario;
-		Nombre = nombre;
+		this.nombre = nombre;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
 		this.telefono = telefono;
@@ -71,11 +71,11 @@ public class Usuario {
 	}
 
 	public final String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public final void setNombre(String nombre) {
-		Nombre = nombre;
+		nombre = nombre;
 	}
 
 	public final String getApellido1() {
@@ -152,7 +152,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", dni=" + dni + ", codUsuario=" + codUsuario + ", Nombre=" + Nombre
+		return "Usuario [id=" + id + ", dni=" + dni + ", codUsuario=" + codUsuario + ", Nombre=" + nombre
 				+ ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", telefono=" + telefono + ", esAdmin="
 				+ esAdmin + ", descuento=" + descuento + ", numAlquileres=" + numAlquileres + ", fechaAlta=" + fechaAlta
 				+ ", fechaBaja=" + fechaBaja + "]";

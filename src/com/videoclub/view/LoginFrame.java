@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -27,7 +28,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 	private ControladorLogIn controlLogIn;
 	
 	
-	public LoginFrame() {
+	public LoginFrame() throws SQLException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 190, 200);
 		contentPane = new JPanel();
@@ -68,7 +69,12 @@ public class LoginFrame extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg) {
 		
-		controlLogIn.LogInEvent(textField.getText(), new String(passwordField.getPassword()));
+		try {
+			controlLogIn.LogInEvent(textField.getText(), new String(passwordField.getPassword()));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

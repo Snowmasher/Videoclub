@@ -1,23 +1,24 @@
 package com.videoclub.controller;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
-import com.videoclub.dao.UsuarioDAOImpl;
+import com.videoclub.dao.UsuarioDAOImplDB;
 import com.videoclub.model.Usuario;
 import com.videoclub.view.MainFrame;
 
 public class ControladorMain {
 	
 	private MainFrame frameMain;
-	private UsuarioDAOImpl usuarioDAO;
+	private UsuarioDAOImplDB usuarioDAO;
 	
-	public ControladorMain(MainFrame frameMain) {
+	public ControladorMain(MainFrame frameMain) throws SQLException {
 		super();
 		
 		this.frameMain = frameMain;
-		this.usuarioDAO = new UsuarioDAOImpl();
+		this.usuarioDAO = new UsuarioDAOImplDB();
 		
 	}
 	

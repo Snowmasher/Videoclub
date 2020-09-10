@@ -1,8 +1,9 @@
 package com.videoclub.controller;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import com.videoclub.dao.UsuarioDAOImpl;
+import com.videoclub.dao.UsuarioDAOImplDB;
 import com.videoclub.model.Usuario;
 import com.videoclub.view.LoginFrame;
 import com.videoclub.view.MainFrame;
@@ -10,15 +11,15 @@ import com.videoclub.view.MainFrame;
 public class ControladorLogIn {
 	
 	private LoginFrame login;
-	private UsuarioDAOImpl usuarioDAO;
+	private UsuarioDAOImplDB usuarioDAO;
 	
-	public ControladorLogIn(LoginFrame ventanaPrincipal) {
+	public ControladorLogIn(LoginFrame ventanaPrincipal) throws SQLException {
 		super();
 		this.login = ventanaPrincipal;
-		this.usuarioDAO = new UsuarioDAOImpl();
+		this.usuarioDAO = new UsuarioDAOImplDB();
 	}
 	
-	public void LogInEvent(String usuario, String contrasena) {
+	public void LogInEvent(String usuario, String contrasena) throws SQLException {
 		
 		List<Usuario> listUsuario = new ArrayList<Usuario>();
 		

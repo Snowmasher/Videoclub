@@ -2,6 +2,8 @@ package com.videoclub.view;
 
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.sql.SQLException;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -19,7 +21,7 @@ public class MainFrame extends JFrame implements ItemListener{
 	private ControladorMain mainController;
 	private JComboBox<String> comboConsulta;
 
-	public MainFrame(){
+	public MainFrame() throws SQLException{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
